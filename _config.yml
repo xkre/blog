@@ -26,7 +26,21 @@ github_username:  "xkre"
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 10 # amount of posts to show
+paginate_path: /page:num/
+
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+  
+whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -53,3 +67,7 @@ include:
 category_archive:
   type: liquid
   path: /categories/
+
+tag_archive:
+  type: liquid
+  path: /tags/
