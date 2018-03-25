@@ -103,6 +103,8 @@ GEM
       commonmarker (~> 0.17.6)
       jekyll-commonmark (~> 1)
       rouge (~> 2)
+    jekyll-data (1.0.0)
+      jekyll (~> 3.3)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
     jekyll-feed (0.9.3)
@@ -241,7 +243,12 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-data
   jekyll-feed (~> 0.6)
+  jekyll-gist
+  jekyll-paginate
+  jekyll-sitemap
+  jemoji
   minima (~> 2.0)
   tzinfo-data
   wdm (~> 0.1.0)
