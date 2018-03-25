@@ -48,3 +48,8 @@ plugins:
 
 include:
   - _pages
+
+
+category_archive:
+  type: liquid
+  path: /categories/
