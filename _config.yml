@@ -22,7 +22,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.xkre.me" # the base hostname & protocol for your site, e.g. http://example.com
 enforce_ssl: blog.xkre.me
-twitter_username: "kurkur"
+#twitter_username: ""
 github_username:  "xkre"
 
 # Build settings
@@ -39,7 +39,7 @@ plugins:
 #   - Gemfile.lock
 #   - node_modules
 #   - vendor/bundle/
-#   - vendor/cache/
+#   - vendor/cache/ 
 #   - vendor/gems/
 #   - vendor/ruby/
 
