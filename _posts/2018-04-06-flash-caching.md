@@ -5,8 +5,8 @@ date:   2018-04-06 12:18:11 +0800
 categories: PC
 ---
 [chart1]: /assets/pics/flash-caching/chart1.png "Peratusan peningkatan dalam masa membuka program-program"
-[chart2]: /assets/pics/flash-caching/chart2.png "Peratusan peningkatan dalam masa membuka program-program"
-[chart3]: /assets/pics/flash-caching/chart3.png "Peratusan peningkatan dalam masa membuka program-program"
+[chart2]: /assets/pics/flash-caching/chart2.png "Masa Diambil"
+[chart3]: /assets/pics/flash-caching/chart3.png "Masa Diambil Oleh Program-Program"
 [software]: https://www.romexsoftware.com/en-us/primo-cache/index.html
 
 Caching merupakan salah satu langkah yang sering diambil untuk melajukan sesuatu sistem komputer. Terdapat banyak jenis caching dalam satu sistem komputer. Flash caching ialah satu proses dimana storan flash seperti SSD digunakan untuk melajukan HDD. Dalam sistem pengoperasian Windows, caching menggunakan flash drive sudah tersedia dengan fungsi _ReadyBoost_. Untuk lagi melajukan sistem, Windows juga menggunakan cache RAM. Proses ini dikenali sebagai _SuperFetch_.
@@ -22,13 +22,13 @@ Keputusannya adalah seperti berikut:
 Merujuk carta di atas, peningkatan yang tertinggi ialah sebanyak 500%, dimana sistem sedia digunakan setelah di-boot. Peningkatan yang paling sedikit ialah Matlab, dimana program ini banyak menggunakan kitar CPU ketika dibuka. Dua program Universal Windows Platform (UWP): Groove music & Photos menunjukkan peningkatan sekitar 200%, dimana program-program tersebut direka untuk penggunaan SSD. 
 
 Keseluruhan masa yang diambil adalah seperti dibawah:
-![Peratusan peningkatan dalam masa membuka program-program][chart2]
+![Masa Diambil][chart2]
 Kelebihan perisian cache yang mempunyai cache kekal seperti Primo Cache adalah ianya dapat mempercepatkan proses boot. Hal ini disebabkan oleh caching module tersebut, yang juga merupakan kernel module, dimuatkan dalam proses boot. Kernel module (driver) adalah antara perkara yang paling awal dimuatkan dalam proses boot. Setelah driver untuk caching telah dimuatkan, ianya dapat mempercepatkan proses untuk memuatkan perkara-perkara yang berikutnya.
 
 Sedia disini merujuk kepada masa yang diambil bagi HDD untuk memuatkan semua fail-fail yang diperlukan oleh sistem pengoperasion dan program-program ketika sistem dihidupkan. Masa yang dicatatkan disini merupakan masa di mana "Active Time" HDD surut dari 99% menjadi kurang dari 20%. Ketika fasa ini, komputer anda kebiasaanya slow.
 
 Maklumat terperinci pembukaan program-program adalah seperti berikut:
-![Peratusan peningkatan dalam masa membuka program-program][chart3]
+![Masa Diambil Oleh Program-Program][chart3]
 Disini, program yang di-bottle-neck oleh kelajuan storan akan menunjukkan peningkatan yang tinggi, manakala program yang bergantung kepada pekakas lain seperti CPU menunjukkan peningkatan yang lebih sedikit.
 
 Warm Startup pula merujuk kepada program yang dimulakan untuk kali kedua dalam satu sesi. Ianya lebih laju kerana sistem pengoperasian telah mengcachekan data-data mereka di dalam RAM. Cache ini kekal dalam RAM selagi mana RAM tersebut tidak diperlukan oleh program lain dan sistem tidak dimatikan.
@@ -39,9 +39,9 @@ Benchmark adalah seperti berikut:
 1. HDD:  
 ![HDD](/assets/pics/flash-caching/benchmark-hdd.png)
 2. USB Drive:  
-![HDD](/assets/pics/flash-caching/benchmark-usb.png)
+![USB](/assets/pics/flash-caching/benchmark-usb.png)
 3. SSD SATA:  
-![HDD](/assets/pics/flash-caching/benchmark-ssd.png)
+![SSD](/assets/pics/flash-caching/benchmark-ssd.png)
 
 ### Mengapa Flash Caching Melajukan Komputer
 
@@ -49,7 +49,7 @@ Seperti dalam bechmark diatas, HDD adalah sangat perlahan apabila membaca fail s
 
 Selain itu, kelajuan HDD bergantung kepada posisi fail tersebut di dalam platter HDD. Posisi yang awal adalah laju, manakala posisi yang akir-akhir adalah perlahan. Untuk HDD 1TB desktop, kebiasaannya kelajuannya antara 150 MB/s sehingga 50 MB/s. Ini adalah disebabkan oleh kelajuan putaran piring yang sama (Constant Angular Velocity), dimana kelajuannya linearnya lain di kawasan piring yang tengah dengan yang luar.
 
-Jika dibandingkan dengan USB drive, usb drive mempunyai random write yang lagi laju berbanding HDD. Tahap kelajuan ini adalah bergantung kepada kualiti drive tersebut. Kelajuan bacaan berturut USB drive juga kebiasaannya lebih konsisten berbanding HDD. Kelemahan USB drive ialah kelajuan menulisnya. Menulis fail di USB drive kebiasaanya laju untuk seketika, dan perlahan seterusnya.
+Jika dibandingkan dengan USB drive, usb drive mempunyai random read yang lagi laju berbanding HDD. Tahap kelajuan ini adalah bergantung kepada kualiti drive tersebut. Kelajuan bacaan berturut USB drive juga kebiasaannya lebih konsisten berbanding HDD. Kelemahan USB drive ialah kelajuan menulisnya. Menulis fail di USB drive kebiasaanya laju untuk seketika, dan perlahan seterusnya.
 
 Dengan caching, USB drive tersebut membantu HDD ketika membaca fail-fail secara rawak. Algoritma caching yang baik dapat membezakan fail-fail yang selalu dibaca secara rawak dan berterusan, dan dapat mengisi cache dengan fail yang selalu dibaca secara rawak. Apabila membaca fail tersebut, kelajuan HDD digabungkan dengan kelajuan USB drive.
 
