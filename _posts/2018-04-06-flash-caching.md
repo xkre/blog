@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Analisis Prestasi HDD + Flash Caching"
-date:   2018-04-04 1:18:11 +0800
+date:   2018-04-06 12:18:11 +0800
 categories: PC
 ---
 [chart1]: /assets/pics/flash-caching/chart1.png "Peratusan peningkatan dalam masa membuka program-program"
